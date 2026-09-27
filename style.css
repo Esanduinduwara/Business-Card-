@@ -1,0 +1,287 @@
+body {
+    margin: 0;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            #3b82f6,
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            #8b5cf6,
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #0f172a,
+            #1e293b
+        );
+
+    color: white;
+}
+
+
+/* =========================
+   PROFILE IMAGE
+========================= */
+
+.avatar {
+    width: 150px;
+    height: 150px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 5px solid rgba(255, 255, 255, 0.9);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.35),
+        0 0 0 8px rgba(255, 255, 255, 0.08);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+/* Image hover effect */
+
+.avatar:hover {
+    transform: scale(1.08) rotate(2deg);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.45),
+        0 0 0 10px rgba(255, 255, 255, 0.12);
+}
+
+
+/* =========================
+   BUSINESS CARD
+========================= */
+
+.card {
+
+    width: 420px;
+
+    max-width: 90%;
+
+    padding: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-around;
+
+    gap: 25px;
+
+    text-align: center;
+
+    color: white;
+
+    /* Glass effect */
+    background: rgba(255, 255, 255, 0.12);
+
+    backdrop-filter: blur(18px);
+
+    -webkit-backdrop-filter: blur(18px);
+
+    /* Border */
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    border-radius: 20px;
+
+    /* Shadow */
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.35),
+        inset 0 1px 1px rgba(255, 255, 255, 0.2);
+
+    /* Bottom accent */
+    border-bottom: 5px solid #38bdf8;
+
+    /* Animation */
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+/* Card hover */
+
+.card:hover {
+
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 30px 70px rgba(0, 0, 0, 0.45),
+        0 0 30px rgba(56, 189, 248, 0.2);
+}
+
+
+/* =========================
+   TEXT SECTION
+========================= */
+
+.blue-border {
+
+    padding: 10px 15px;
+
+    border-left: 2px solid rgba(56, 189, 248, 0.8);
+
+    text-align: left;
+}
+
+
+/* Keep original class available */
+
+.border-blue {
+
+    padding: 10px 15px;
+
+    border: 1px dotted #38bdf8;
+}
+
+
+/* =========================
+   NAME
+========================= */
+
+.card h3 {
+
+    margin: 0 0 10px;
+
+    font-size: 25px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    background: linear-gradient(
+        90deg,
+        #ffffff,
+        #7dd3fc
+    );
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* =========================
+   JOB TITLE
+========================= */
+
+.card p {
+
+    margin: 0 0 12px;
+
+    font-size: 14px;
+
+    color: #bae6fd;
+
+    font-weight: 500;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================
+   LOCATION
+========================= */
+
+.card h4 {
+
+    margin: 0;
+
+    font-size: 14px;
+
+    color: #cbd5e1;
+
+    font-weight: 400;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 600px) {
+
+    .card {
+
+        width: 90%;
+
+        padding: 25px;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .blue-border {
+
+        border-left: none;
+
+        border-top: 2px solid rgba(56, 189, 248, 0.8);
+
+        text-align: center;
+
+        padding-top: 15px;
+    }
+
+    .avatar {
+
+        width: 130px;
+
+        height: 130px;
+    }
+
+    .card h3 {
+
+        font-size: 22px;
+    }
+}
+
+
+/* =========================
+   SMALL SCREENS
+========================= */
+
+@media (max-width: 400px) {
+
+    .card {
+
+        padding: 20px;
+    }
+
+    .avatar {
+
+        width: 110px;
+
+        height: 110px;
+    }
+
+    .card h3 {
+
+        font-size: 20px;
+    }
+
+    .card p,
+    .card h4 {
+
+        font-size: 12px;
+    }
+}
